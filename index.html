@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saathi Story Navigator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 0;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            flex: 1;
+            min-width: 300px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-header {
+            background: #4e73df;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        .card-body {
+            padding: 25px;
+        }
+
+        .features {
+            list-style-type: none;
+        }
+
+        .features li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+
+        .features li i {
+            margin-right: 15px;
+            color: #6e8efb;
+            font-size: 1.2rem;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: #4e73df;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 20px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: #2e59d9;
+        }
+
+        .story-container {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            margin-top: 30px;
+        }
+
+        .story-title {
+            color: #4e73df;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .story-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .nav-btn {
+            padding: 12px 25px;
+            background: #4e73df;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-btn:hover {
+            background: #2e59d9;
+        }
+
+        .nav-btn i {
+            margin: 0 5px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+            
+            header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .navigation {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .nav-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Saathi Story Navigator</h1>
+            <p>Discover, read, and navigate through a vast collection of stories from various genres and cultures</p>
+        </header>
+
+        <div class="main-content">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Features</h2>
+                </div>
+                <div class="card-body">
+                    <ul class="features">
+                        <li><i class="fas fa-book-open"></i> Thousands of stories from around the world</li>
+                        <li><i class="fas fa-search"></i> Advanced search and categorization</li>
+                        <li><i class="fas fa-bookmark"></i> Save your favorite stories</li>
+                        <li><i class="fas fa-language"></i> Multiple language support</li>
+                        <li><i class="fas fa-mobile-alt"></i> Responsive design for all devices</li>
+                        <li><i class="fas fa-audio-description"></i> Audio narration for selected stories</li>
+                    </ul>
+                    <a href="#" class="btn">Get Started <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2>Popular Stories</h2>
+                </div>
+                <div class="card-body">
+                    <ul class="features">
+                        <li><i class="fas fa-star"></i> The Forest of Mysteries</li>
+                        <li><i class="fas fa-star"></i> Tales from the Himalayas</li>
+                        <li><i class="fas fa-star"></i> Ocean's Whisper</li>
+                        <li><i class="fas fa-star"></i> The Lost City of Gold</li>
+                        <li><i class="fas fa-star"></i> Folktales from Rajasthan</li>
+                        <li><i class="fas fa-star"></i> The Moonlit Journey</li>
+                    </ul>
+                    <a href="#" class="btn">Explore More <i class="fas fa-compass"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="story-container">
+            <h2 class="story-title">Sample Story: The Wise Farmer</h2>
+            <div class="story-content">
+                <p>In a small village nestled between lush green mountains, there lived a wise farmer named Raj. He was known for his innovative farming techniques and generous nature.</p>
+                <p>One season, when the rains were scarce and the villagers worried about their crops, Raj developed a new irrigation system that saved the harvest. He didn't keep this knowledge to himself but shared it freely with all the farmers in the village.</p>
+                <p>When asked why he shared his invention so freely, he replied, "Knowledge grows when shared, just as seeds multiply when planted." His wisdom spread far beyond the village, and farmers from distant lands came to learn from him.</p>
+                <p>Raj's story reminds us that true wisdom lies not just in knowledge, but in the willingness to share it for the benefit of all.</p>
+            </div>
+            <div class="navigation">
+                <button class="nav-btn"><i class="fas fa-arrow-left"></i> Previous Story</button>
+                <button class="nav-btn">Next Story <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2023 Saathi Story Navigator | Designed for easy hosting on Render.com</p>
+            <p>Connect with us: <i class="fab fa-twitter"></i> <i class="fab fa-facebook"></i> <i class="fab fa-instagram"></i></p>
+        </footer>
+    </div>
+
+    <script>
+        // Simple JavaScript for demonstration
+        document.addEventListener('DOMContentLoaded', function() {
+            const navButtons = document.querySelectorAll('.nav-btn');
+            const storyTitle = document.querySelector('.story-title');
+            const storyContent = document.querySelector('.story-content');
+            
+            // Sample stories data
+            const stories = [
+                {
+                    title: "Sample Story: The Wise Farmer",
+                    content: `<p>In a small village nestled between lush green mountains, there lived a wise farmer named Raj. He was known for his innovative farming techniques and generous nature.</p>
+                              <p>One season, when the rains were scarce and the villagers worried about their crops, Raj developed a new irrigation system that saved the harvest. He didn't keep this knowledge to himself but shared it freely with all the farmers in the village.</p>
+                              <p>When asked why he shared his invention so freely, he replied, "Knowledge grows when shared, just as seeds multiply when planted." His wisdom spread far beyond the village, and farmers from distant lands came to learn from him.</p>
+                              <p>Raj's story reminds us that true wisdom lies not just in knowledge, but in the willingness to share it for the benefit of all.</p>`
+                },
+                {
+                    title: "The Mysterious Island",
+                    content: `<p>Captain Maya and her crew were on a routine expedition when a storm blew their ship off course. They found themselves near an uncharted island that didn't appear on any maps.</p>
+                              <p>As they approached the island, they noticed strange rock formations that seemed to glow with a soft blue light. The vegetation was unlike anything they had seen before - trees with silver leaves and flowers that changed color.</p>
+                              <p>What secrets does this mysterious island hold? Join Captain Maya as she explores this unknown land and discovers its amazing secrets.</p>`
+                },
+                {
+                    title: "The Lost Key",
+                    content: `<p>Young Aarav was helping his grandmother clean the attic when he found an old, ornate key tucked inside a dusty book. The key was made of brass and had intricate designs carved into it.</p>
+                              <p>His grandmother's eyes widened when she saw it. "That key," she whispered, "belongs to a box that contains our family's greatest secret."</p>
+                              <p>But the box had been lost years ago. Join Aarav and his grandmother as they search for the box that the key unlocks, and discover the family secret that has been hidden for generations.</p>`
+                }
+            ];
+            
+            let currentStoryIndex = 0;
+            
+            // Function to update story
+            function updateStory() {
+                storyTitle.textContent = stories[currentStoryIndex].title;
+                storyContent.innerHTML = stories[currentStoryIndex].content;
+            }
+            
+            // Add event listeners to navigation buttons
+            navButtons[0].addEventListener('click', function() {
+                if (currentStoryIndex > 0) {
+                    currentStoryIndex--;
+                    updateStory();
+                }
+            });
+            
+            navButtons[1].addEventListener('click', function() {
+                if (currentStoryIndex < stories.length - 1) {
+                    currentStoryIndex++;
+                    updateStory();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
